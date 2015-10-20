@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Página Editar</title>
+    </h:head>
+    <h:body>
+      
+        <center>
+        <h:form><br/><br/>
+            <h:panelGrid columns="2">  
+                  <h4> ID:</h4> <h:outputText value="#{usuariosBean.usuario.id}"/>
+                <h4>Usuário:</h4> <h:inputText value="#{usuariosBean.usuario.usuario}"/>
+                <h4>Email: </h4><h:inputText value="#{usuariosBean.usuario.email}"/>
+                <h4>Senha: </h4><h:inputSecret value="#{usuariosBean.usuario.senha}"/>
+                <h4> Confirmação de senha: </h4><h:inputSecret value="#{usuariosBean.usuario.confSenha}"/>
+                <h:inputHidden/>
+                <b:commandButton value="Atualizar" look="success" action="#{usuariosBean.atualizarUsuario()}"/>
+            </h:panelGrid>
+
+        </h:form></center>
+    </h:body>
+</html>
+
